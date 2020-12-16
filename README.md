@@ -33,10 +33,10 @@ You can replace these variables by running the following command:
 
 ```
 docker run -itd \
-    -p 80:80
+    -p 80:80 \
     -v $PWD/servers:/docker-entrypoint.d \
     -e NGINX_SERVER_NAME=localhost \
-    -e NGINX_ROOT=/usr/share/nginx/html
+    -e NGINX_ROOT=/usr/share/nginx/html \
     maiorano84/envinx
 ```
 
