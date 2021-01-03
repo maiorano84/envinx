@@ -6,7 +6,7 @@ if [ "$1" = "nginx" -o "$1" = "nginx-debug" ]; then
   ORIGINAL_IFS=$IFS
   IFS='='
 
-  cp -r /docker-entrypoint.d/* /etc/nginx/conf.d/
+  cp -rL /docker-entrypoint.d/* /etc/nginx/conf.d/
   find "/etc/nginx/conf.d/" -follow -type f -print | while read -r f; do
       case "$f" in
           *.conf)
